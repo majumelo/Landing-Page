@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio da equipe Maria Júlia e Vinicius - Projetos, Skills e Contato.">
-    <title>Portfólio - Maria Júlia & Vinicius</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio da equipe Maria Júlia e Vinicius - Projetos, Skills e Contato." />
+  <title>Portfólio - Maria Júlia & Vinicius</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        
-        <nav>
-            <a href="#" class="logo">M&V</a>
-            <button id="menu-toggle" aria-label="Abrir menu">☰</button>
-            <img src="logo.png" alt="Logo">
-            <ul id="menu">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="#" class="logo" aria-label="Página inicial">
+        <img src="fotos/logo.png" alt="Logo Maria Júlia e Vinicius" />
+      </a>
+      <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+      <ul id="menu">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- HERO -->
-        <section id="hero">
-            <h1>Equipe Maria Júlia & Vinicius</h1>
-            <p>Soluções criativas em desenvolvimento web e software.</p>
-        </section>
+  <main>
+    <section id="hero">
+      <h1>Maria Júlia & Vinicius</h1>
+      <p>Soluções criativas em desenvolvimento web e software.</p>
+    </section>
 
-        <!-- SOBRE -->
-        <section id="sobre">
-            <h2>Sobre a Equipe</h2>
-            <div class="integrantes">
-                <article>
-                    <img src="foto maju.jpg" alt="Foto de Maria Júlia">
-                    <h3>Maria Júlia Melo</h3>
-                    <p>Desenvolvedora Back-end | Ciência da Computação (UEPB)</p>
-                </article>
-                <article>
-                    <img src="foto vinicius.png" alt="Foto de Vinicius">
-                    <h3>Vinicius Azevedo Lelis</h3>
-                    <p>Desenvolvedor Back-end | Sistemas de Informação (Unifacisa)</p>
-                </article>
-            </div>
-        </section>
+    <section id="sobre">
+      <h2>Sobre a Equipe</h2>
+      <div class="integrantes">
+        <article>
+          <img src="fotos/foto maju.jpg" alt="Foto de Maria Júlia" />
+          <h3>Maria Júlia Melo</h3>
+          <p>Desenvolvedora Back-end | Ciência da Computação (UEPB)</p>
+        </article>
+        <article>
+          <img src="fotos/foto vinicius.png" alt="Foto de Vinicius" />
+          <h3>Vinicius Azevedo Lelis</h3>
+          <p>Desenvolvedor Back-end | Sistemas de Informação (Unifacisa)</p>
+        </article>
+      </div>
+    </section>
 
-        <!-- SKILLS -->
-        <section id="skills">
-            <h2>Skills & Stacks</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Java</li>
-            </ul>
-        </section>
+    <section id="skills">
+      <h2>Skills & Stacks</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+      </ul>
+    </section>
 
-        <!-- PROJETOS -->
-        <section id="projetos">
-            <h2>Projetos</h2>
-            <div class="cards">
-                <article>
-                    <h3>Hotelaria Java</h3>
-                    <p>Sistema de gerenciamento de reservas e clientes.</p>
-                    <a href="#" target="_blank">Ver projeto</a>
-                </article>
-                <article>
-                    <h3>Biblioteca Python</h3>
-                    <p>Aplicação para controle de acervo e empréstimos.</p>
-                    <a href="#" target="_blank">Ver projeto</a>
-                </article>
-                <article>
-                    <h3>Portfólio Web</h3>
-                    <p>Site responsivo em HTML, CSS e JS.</p>
-                    <a href="#" target="_blank">Ver projeto</a>
-                </article>
-            </div>
-        </section>
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="cards">
+        <article>
+          <h3>Hotelaria Java</h3>
+          <p>Sistema de gerenciamento de reservas e clientes.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </article>
+        <article>
+          <h3>Biblioteca Python</h3>
+          <p>Aplicação para controle de acervo e empréstimos.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </article>
+        <article>
+          <h3>Portfólio Web</h3>
+          <p>Site responsivo em HTML, CSS e JS.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </article>
+      </div>
+    </section>
 
-        <!-- CONTATO -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <form id="form-contato">
-                <label for="nome">Nome*</label>
-                <input type="text" id="nome" name="nome" required>
+    <section id="redes">
+      <h2>Redes Sociais</h2>
+      <div class="listas-lado-a-lado">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/maria-julia-melo-725617162">LinkedIn - Maria Júlia</a></li>
+          <li><a href="https://github.com/ViniciusLelis0">GitHub - Maria Júlia</a></li>
+          <li><a href="https://www.instagram.com/amajumelo">Instagram - Maria Júlia</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://br.linkedin.com/in/vinicius-lelis-56754322a">LinkedIn - Vinicius Lelis</a></li>
+          <li><a href="https://github.com/ViniciusLelis0">GitHub - Vinicius Lelis</a></li>
+          <li><a href="https://www.instagram.com/viniiciuslelis">Instagram - Vinicius Lelis</a></li>
+        </ul>
+      </div>
+    </section>
 
-                <label for="email">E-mail*</label>
-                <input type="email" id="email" name="email" required>
+    <section id="contato">
+      <h2>Contato</h2>
+      <form id="form-contato">
+        <label for="nome">Nome*</label>
+        <input type="text" id="nome" name="nome" required />
 
-                <label for="mensagem">Mensagem*</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+        <label for="email">E-mail*</label>
+        <input type="email" id="email" name="email" required />
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p>Ou entre em contato: 
-                <a href="mailto:majumelo2006@gmail.com">majumelo2006@gmail.com</a>
-            </p>
-        </section>
-    </main>
+        <label for="mensagem">Mensagem*</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
 
-    <footer>
-        <button id="voltar-topo" aria-label="Voltar ao topo">↑</button>
-        <p>&copy; 2025 Maria Júlia & Vinicius. Todos os direitos reservados.</p>
-    </footer>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 
-    <script src="assets/js/script.js"></script>
+  <footer>
+    <nav>
+    <a href="#" id="voltar-topo" aria-label="Página inicial">↑</a>
+    </nav>
+    <p>&copy; 2025 Maria Júlia & Vinicius. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
