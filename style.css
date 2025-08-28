@@ -102,7 +102,7 @@ nav .logo img {
 #hero {
   height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), var(--bg-color)), 
-              url('fotos/inicio.jpg') no-repeat center/cover;
+              url('foto para fondo de inicio') no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,40 +232,6 @@ section {
   font-weight: 600;
 }
 
-/* Redes Sociais */
-.listas-lado-a-lado {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.listas-lado-a-lado ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.listas-lado-a-lado li {
-  background: var(--card-bg);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s;
-}
-
-.listas-lado-a-lado li:hover {
-  transform: scale(1.05);
-}
-
-.listas-lado-a-lado a {
-  color: var(--text-color);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
 /* Contato */
 #form-contato {
   max-width: 600px;
@@ -308,6 +274,42 @@ section {
 
 #form-contato button:hover {
   background: var(--accent-hover);
+}
+
+/* Redes Sociais */
+.listas-lado-a-lado {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.listas-lado-a-lado ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listas-lado-a-lado li {
+ background: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 53, 102, 0.3);
+  transition: background 0.3s;
+}
+
+.listas-lado-a-lado li:hover {
+  background: var(--accent-hover);
+}
+
+.listas-lado-a-lado a {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /* Footer */
