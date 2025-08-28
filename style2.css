@@ -1,0 +1,235 @@
+/* ===== Reset & base ===== */ 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root{
+  --bg: #0f172a;
+  --surface:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --primary:#60a5fa;
+  --accent:#22d3ee;
+  --radius:14px;
+  --shadow: 0 6px 14px rgba(0,0,0,.25);
+  --maxw: 1100px;
+  --space: 1rem;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f8fafc;
+    --surface:#ffffff;
+    --text:#0f172a;
+    --muted:#475569;
+    --shadow: 0 6px 14px rgba(2,6,23,.08);
+  }
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+  line-height:1.6;
+  color:var(--text);
+  background:radial-gradient(1200px 600px at 20% -10%, #1e293b 0, transparent 60%),
+             radial-gradient(1000px 500px at 100% 0, #0ea5e9 0, transparent 40%),
+             var(--bg);
+}
+
+/* ===== Layout helpers ===== */
+.container{
+  width: min(100% - 2rem, var(--maxw));
+  margin-inline:auto;
+}
+section{ padding: 3.5rem 0; }
+h1,h2,h3{ line-height:1.2; margin:0 0 .75rem }
+p{ margin: .25rem 0 1rem }
+img{ max-width:100%; height:auto; display:block; border-radius: var(--radius); }
+
+/* ===== Header & Nav ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+  z-index: 50;
+}
+
+header .container {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.logo{
+  font-weight:700; text-decoration:none; color:var(--text);
+  letter-spacing:.5px; padding:.25rem .5rem; border-radius:10px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text; background-clip:text; color: transparent;
+  margin-bottom: 2rem;
+}
+
+#menu-toggle{
+  font-size:1.4rem; background:none; border:1px solid color-mix(in srgb, var(--text) 20%, transparent);
+  color:var(--text); padding:.35rem .6rem; border-radius:10px;
+  margin-bottom: 1rem;
+}
+
+#menu{
+  list-style:none; padding:0; margin:0;
+  display:flex !important; flex-direction:column; gap:.5rem;
+  width: 100%;
+}
+#menu a{
+  text-decoration:none; color:var(--text); padding:.75rem 1rem; border-radius: var(--radius);
+}
+#menu a:hover,#menu a:focus-visible{ background: color-mix(in srgb, var(--text) 8%, transparent); }
+
+@media (min-width: 768px){
+  #menu{ flex-direction: column; }
+  #menu-toggle{ display:none; }
+}
+
+#menu.is-open{ display:flex; }
+
+main {
+  margin-left: 200px;
+}
+
+/* ===== HERO ===== */
+#hero{
+  padding: 5rem 0 4rem;
+  text-align:center;
+}
+#hero h1{ font-size: clamp(1.8rem, 3.8vw, 3rem); }
+#hero p{ color:var(--muted); font-size: clamp(1rem, 1.6vw, 1.125rem); }
+
+/* ===== SOBRE ===== */
+#sobre .integrantes{
+  display:grid; gap:1rem;
+  grid-template-columns: 1fr;
+}
+#sobre article{
+  background: var(--surface); padding:1rem; border-radius: var(--radius); box-shadow: var(--shadow);
+}
+#sobre h3{ margin:.5rem 0 .25rem }
+#sobre p{ color:var(--muted); margin:0; }
+
+/* Aumenta a foto de Vinícius */
+#sobre article#vinicius img {
+  width: 150px;  /* tamanho maior */
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (min-width: 640px){
+  #sobre .integrantes{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== SKILLS interativos ===== */
+#skills ul{
+  list-style:none; padding:0; margin:0;
+  display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.75rem;
+}
+#skills li{
+  display:flex; align-items:center; gap:.5rem;
+  background: var(--surface); padding:.75rem; border-radius: var(--radius); box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+#skills li:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+}
+#skills li img{
+  width:28px; height:28px; border-radius:6px;
+  transition: transform 0.2s ease;
+}
+#skills li:hover img{
+  transform: scale(1.2);
+}
+
+@media (min-width: 640px){
+  #skills ul{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 920px){
+  #skills ul{ grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ===== PROJETOS ===== */
+#projetos .cards{
+  display:grid; gap:1rem; grid-template-columns: 1fr;
+}
+#projetos article{
+  background: var(--surface); padding:1rem; border-radius: var(--radius); box-shadow: var(--shadow);
+  display:flex; flex-direction:column; gap:.5rem;
+}
+#projetos a{
+  align-self:flex-start;
+  text-decoration:none; font-weight:600;
+  padding:.5rem .75rem; border-radius:10px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color:#0b1020;
+}
+#projetos a:hover, #projetos a:focus-visible{ opacity:.9; }
+@media (min-width: 700px){
+  #projetos .cards{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px){
+  #projetos .cards{ grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ===== CONTATO ===== */
+form{
+  display:grid; gap:.75rem; max-width:720px;
+  background: var(--surface); padding:1rem; border-radius: var(--radius); box-shadow: var(--shadow);
+}
+label{ font-weight:600; }
+input, textarea{
+  width:100%; padding:.75rem .8rem;
+  border:1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  border-radius:12px; background: transparent; color: var(--text);
+}
+textarea{ min-height: 140px; resize: vertical; }
+button[type="submit"]{
+  padding:.7rem 1rem; border:0; border-radius:12px; cursor:pointer; font-weight:700;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color:#091020; box-shadow: var(--shadow);
+}
+button[type="submit"]:hover, button[type="submit"]:focus-visible{ opacity:.9; }
+
+/* ===== Footer ===== */
+footer{ text-align:center; padding:2rem 0; color:var(--muted); position:relative; }
+#voltar-topo{
+  position: fixed; right:1rem; bottom:1rem; z-index:40;
+  border:0; padding:.6rem .7rem; border-radius: 999px; cursor:pointer;
+  background: linear-gradient(90deg, var(--primary), var(--accent)); color:#0b1020;
+  box-shadow: var(--shadow);
+}
+
+/* ===== Acessibilidade & estados ===== */
+a, button, input, textarea{ transition: all .2s ease; }
+:focus-visible{ outline: 3px solid var(--accent); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce){
+  * { transition: none !important; scroll-behavior: auto; }
+}
+
+/* ===== Utilidades ===== */
+.wrapper{ padding-inline: 1rem; }
+header .wrapper, main .wrapper, footer .wrapper{ display:block; }
+
+/* ===== Impressão (simplificada) ===== */
+@media print{
+  header, nav, #voltar-topo{ display:none !important; }
+  body{ background:#fff; color:#000; }
+  section{ padding: 1rem 0; }
+}
