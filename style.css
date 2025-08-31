@@ -17,10 +17,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg-color) url('fotos/foto fundo.png') center / cover no-repeat fixed;
