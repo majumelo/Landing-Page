@@ -356,8 +356,9 @@ footer {
   margin-top: 2rem;
 }
 
+/* Botão escondido por padrão */
 #voltar-topo {
-  position: absolute;
+  position: fixed; /* melhor que absolute, assim ele acompanha a tela */
   right: 1rem;
   bottom: 1rem;
   background: var(--accent-color);
@@ -369,7 +370,17 @@ footer {
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, opacity 0.3s ease;
+  display: none;   /* 🔹 escondido inicialmente */
+  opacity: 0;
+}
+
+/* Quando o JS ativar a classe .show */
+#voltar-topo.show {
+  display: flex;   /* ou block, mas flex centraliza melhor o ícone ↑ */
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
 }
 
 #voltar-topo:hover {
