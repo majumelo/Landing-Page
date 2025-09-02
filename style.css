@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--bg-color) url('fotos/foto fundo.png') center / cover no-repeat fixed;
+  background: var(--bg-color) url('fotos/foto-fundo.png') center / cover no-repeat fixed;
   color: var(--text-color);
   line-height: 1.6;
   min-height: 100vh;
@@ -529,4 +529,5 @@ footer {
   #menu li a {
     font-size: 0.9rem;
   }
+
 }
